@@ -1,2 +1,8 @@
 # go-kon-codova2
-second
+
+
+## install
+    `$npm install`
+    これでnode_modulesがインストールされます
+
+

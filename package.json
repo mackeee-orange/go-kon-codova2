@@ -2,10 +2,33 @@
   "name": "go-kon-cordova2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "maki",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "history": "^3.0.0",
+    "onsenui": "^1.3.17",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-onsenui": "^0.6.2",
+    "react-router": "^2.5.2",
+    "react-tap-event-plugin": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-react-hmre": "^1.1.1"
+  }
 }
