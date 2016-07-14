@@ -11,10 +11,14 @@ var Loader = React.createClass({
   render: function(){
     if(this.props.isActive){
       return (
-        <p>
-          <Ons.ProgressCircular indeterminate />
-          ちゃんとレンダリングされてるのに
-        </p>
+        <center className="center">
+          <p>
+            周辺のデバイスを探してるのよ。
+          </p>
+          <p>
+            <Ons.ProgressCircular indeterminate />
+          </p>
+        </center>
       );
     } else {
       return null;
@@ -23,7 +27,13 @@ var Loader = React.createClass({
 });
 
 var HomePage = React.createClass({
-  
+
+  getDefaultProps:function(){
+    return {
+      page_title: 'NeighborsList'
+    };
+  },
+
   getInitialState: function() {
     this.scan();
     return {

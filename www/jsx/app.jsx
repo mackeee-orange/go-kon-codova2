@@ -28,9 +28,7 @@ const App = React.createClass({
           </Ons.ToolbarButton>
         </div>
         <div className="center">
-          <p>
-            title
-          </p>
+          {this.props.children.props.page_title}
         </div>  
       </Ons.Toolbar>
     );

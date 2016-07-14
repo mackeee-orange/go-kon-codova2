@@ -13,6 +13,12 @@ var ChatPage = React.createClass({
 });
 
 var TextField = React.createClass({
+  getDefaultProps: function(){
+    return {
+      page_title: 'Chat'
+    };
+  },
+  
   getInitialState: function(){
     return {default_text: ""};
   },
