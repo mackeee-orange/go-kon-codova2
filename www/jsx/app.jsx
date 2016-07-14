@@ -30,7 +30,7 @@ const App = React.createClass({
 });
 
 const routes = (
-  <Route path="/" component={App}>
+  <Route path="*" component={App}>
     <IndexRoute component={HomePage}/>
     <Route component={HomePage}/>
     <Route component={RoomPage}/>
