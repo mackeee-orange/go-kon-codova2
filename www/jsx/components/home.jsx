@@ -74,7 +74,7 @@ var HomePage = React.createClass({
   },
 
   onError: function(error){
-    alert('Error: ' + error+"kokodayo");
+    console.log('Error: ' + error);
   },
 
   getDeviceNum: function(){
