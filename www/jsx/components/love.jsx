@@ -1,4 +1,5 @@
 import React from 'react';
+import Ons from 'react-onsenui';
 
 var LovePage = React.createClass({
   render: function(){

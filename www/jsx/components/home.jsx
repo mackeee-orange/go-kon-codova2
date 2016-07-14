@@ -7,10 +7,14 @@ import React from 'react';
 import Ons from 'react-onsenui';
 
 var Loader = React.createClass({
+
   render: function(){
     if(this.props.isActive){
       return (
-        <Ons.ProgressCircular indeterminate />
+        <p>
+          <Ons.ProgressCircular indeterminate />
+          ちゃんとレンダリングされてるのに
+        </p>
       );
     } else {
       return null;
@@ -19,6 +23,7 @@ var Loader = React.createClass({
 });
 
 var HomePage = React.createClass({
+  
   getInitialState: function() {
     this.scan();
     return {
@@ -59,7 +64,7 @@ var HomePage = React.createClass({
   },
 
   onError: function(error){
-    alert('Error: ' + error);
+    alert('Error: ' + error+"kokodayo");
   },
 
   getDeviceNum: function(){
@@ -105,7 +110,7 @@ var HomePage = React.createClass({
       />;
     }
     return (
-      <div className="home_page" onload={this.handleLoad}>
+      <div className="home_page" onLoad={this.handleLoad}>
         <Loader isActive={this.state.loading}/>
         {onLoadDevice}
       </div>

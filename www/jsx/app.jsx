@@ -1,6 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Router, Route, Link, browserHistory, IndexRoute} from 'react-router';
+import ons from 'onsenUI';
+import Ons from 'react-onsenui';
 
 /*
 import {HomePage} from 'components/home.jsx';
@@ -13,18 +15,34 @@ const HomePage = require('./components/home.jsx');
 const RoomPage = require('./components/room.jsx');
 const ChatPage = require('./components/chat.jsx');
 const LovePage = require('./components/love.jsx');
-const Header = require('./components/header.jsx');
 
 
 const App = React.createClass({
-  render() {
+
+  renderToolbar: function() {
     return (
-      <div className="app">
-        <Header />
+      <Ons.Toolbar>
+        <div className="left">
+          <Ons.ToolbarButton>
+            <Ons.Icon icon='ion-navicon, material: md-menu' />
+          </Ons.ToolbarButton>
+        </div>
+        <div className="center">
+          <p>
+            title
+          </p>
+        </div>  
+      </Ons.Toolbar>
+    );
+  },
+
+  render: function() {
+    return (
+      <Ons.Page renderToolbar={this.renderToolbar}>
         <div className="page">
           {this.props.children}
         </div>
-      </div>
+      </Ons.Page>
     );
   }
 });

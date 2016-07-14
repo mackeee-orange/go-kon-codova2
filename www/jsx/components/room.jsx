@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Ons from 'react-onsenui';
 
 var RoomPage = React.createClass({
   render: function(){
