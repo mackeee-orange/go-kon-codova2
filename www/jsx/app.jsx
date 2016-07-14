@@ -16,11 +16,7 @@ const LovePage = require('./components/love.jsx');
 const Header = require('./components/header.jsx');
 
 
-export default class App extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
+const App = React.createClass({
   render() {
     return (
       <div className="app">
@@ -31,7 +27,7 @@ export default class App extends React.Component{
       </div>
     );
   }
-}
+});
 
 const routes = (
   <Route path="/" component={App}>
@@ -43,15 +39,9 @@ const routes = (
   </Route>
 );
 
-render(
-  (<Route history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={HomePage}/>
-      <Route component={HomePage}/>
-      <Route component={RoomPage}/>
-      <Route component={ChatPage}/>
-      <Route component={LovePage}/>
-    </Route>
-  </Route>), 
-  document.getElementById('app')
+render((
+  <Router history={browserHistory}>
+    {routes}
+  </Router>
+  ), document.getElementById('app')
 );
