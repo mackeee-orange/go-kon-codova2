@@ -5,6 +5,10 @@
     `$npm install`
     これでnode_modulesがインストールされます
 
+    `$ cordova plugin add cordova-plugin-ble-central`
+    `$ cordova platform add ios`
+    `$ cordova platform add browser`
+
 ## preset
     `$npm install -g gulp`
     これでgulpコマンド使えるようになります
